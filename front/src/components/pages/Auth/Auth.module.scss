@@ -1,0 +1,27 @@
+@import '../../../scss/variables';
+@import '../../../scss/animations';
+
+.wrapperButtons {
+    display: flex;
+    flex-direction: column;
+
+
+    > div {
+        margin: 0 auto;
+        width: 70%;
+        > button {
+            margin-top: 40px;
+            width: 100%;
+        }
+        &:last-child > button {
+            margin-top: 15px;
+            background-color: #20366b;
+            opacity: 0.8;
+            transition: opacity .2s ease;
+            &:hover {
+                background-color: #29478c;
+                opacity: 1;
+            }
+        }
+    }
+}
