@@ -9,8 +9,8 @@ import Loader from "../../UI/loader/loader";
 import Field from "../../UI/Field/Field";
 import Button from "../../UI/Button/Button";
 import Alert from "../../UI/Alert/Alert";
-import { useMutation } from "react-query";
 import { $api } from "../../api/api";
+import { useMutation } from "react-query";
 import { useHistory } from "react-router-dom";
 
 const Auth = () => {

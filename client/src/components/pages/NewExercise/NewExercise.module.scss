@@ -1,0 +1,21 @@
+@import "../../../scss/variables";
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+    > img {
+        margin: 1rem 0.5rem; 
+        cursor: pointer;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom .3s ease;
+
+        &.active {
+            border-color: $accent;
+        }
+    }
+
+}

@@ -10,14 +10,14 @@ import { useAuth } from "../../../hooks/useAuth";
 
 const Header = () => {
   const history = useHistory();
-  const { location, goBack } = history;
+  const { location } = history;
 
   const { isAuth } = useAuth();
 
   return (
     <header className={styles.header}>
       {location.pathname !== "/" ? (
-        <button type="button" onClick={() => goBack()}>
+        <button type="button" onClick={() =>  history.push("/")}>
           <img src={arrowImage} alt="Back" />
         </button>
       ) : (

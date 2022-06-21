@@ -5,13 +5,13 @@
   "main": "back/server.js",
   "type": "module",
   "scripts": {
-		"server": "nodemon server/server",
-		"server-start": "node server/server",
-		"start": "concurrently \"npm run server-start\" \"npm run start --prefix client\"",
-		"dev": "concurrently \"npm run server\" \"npm run start --prefix client\"",
-		"build": "cd client && npm run build",
-		"install-client": "cd client && npm install",
-		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "server": "nodemon server/server",
+    "server-start": "node server/server",
+    "start": "concurrently \"npm run server-start\" \"npm run start --prefix client\"",
+    "dev": "concurrently \"npm run server\" \"npm run start --prefix client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "url": "git+https://github.com/Zh3kka/workout_app.git"
