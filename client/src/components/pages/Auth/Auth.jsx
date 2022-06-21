@@ -91,7 +91,7 @@ const Auth = () => {
         <form onSubmit={handleSubmit}>
           <Field
             type="email"
-            placeholder="Enter email"
+            placeholder="Enter email / username"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required

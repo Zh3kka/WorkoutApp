@@ -15,4 +15,10 @@
             font-weight: 600;
         }
     }
+
+    &.profile {
+        > .count .heading {
+            color: $black;
+        }
+    }
 }
