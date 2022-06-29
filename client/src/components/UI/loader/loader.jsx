@@ -1,10 +1,8 @@
-import React from 'react';
-import loader from '../../../images/loader.svg'
+import React from "react";
+import loader from "../../../images/loader.svg";
 
 const Loader = () => {
-    return (
-        <img src={loader} alt='loader'/>
-    );
-}
+  return <img src={loader} alt="loader" draggable={false} />;
+};
 
 export default Loader;

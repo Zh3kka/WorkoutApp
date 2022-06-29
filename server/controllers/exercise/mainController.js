@@ -48,7 +48,7 @@ export const deleteExercise = asyncHandler(async (req, res) => {
 
 	if (!exercise) {
 		res.status(404)
-		throw new Error('Данное упражнение не найдено!')
+		throw new Error('This exercise does not found')
 	}
 
 	await exercise.remove()

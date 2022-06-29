@@ -12,8 +12,10 @@
         padding-bottom: 0.6rem;
         border-bottom: 1px solid transparent;
         transition: border-bottom .3s ease;
+        opacity: .4;
 
         &.active {
+            opac: 0.8;
             border-color: $accent;
         }
     }

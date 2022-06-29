@@ -83,7 +83,7 @@ const Auth = () => {
 
   return (
     <>
-      <Layout bgImage={bgImage} heading="Auth or Register" />
+      <Layout bgImage={bgImage} heading="Auth or Register"/>
       <div className="wrapper-inner-page">
         {error && <Alert type="error" text={error} />}
         {errorAuth && <Alert type="error" text={errorAuth} />}

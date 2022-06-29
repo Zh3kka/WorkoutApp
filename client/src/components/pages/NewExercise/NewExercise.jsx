@@ -38,8 +38,8 @@ const NewExercise = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(name && times && imageName) {
-      mutate()
+    if (name && times && imageName) {
+      mutate();
     } else {
       // complete the check
     }
@@ -74,6 +74,7 @@ const NewExercise = () => {
                   [styles.active]: imageName === name,
                 })}
                 onClick={() => setImageName(name)}
+                draggable={false}
               />
             ))}
           </div>

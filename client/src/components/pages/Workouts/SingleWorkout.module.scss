@@ -20,13 +20,19 @@
             background-color: $dark_purple;
         }
 
+        > button,
         > a {
+            padding: 14px 20px;
+            font-size: 20px;
             color: $white;
-            display: block;
             text-decoration: none;
-            align-items: center;
             justify-content: space-between;
             display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
         }
     }
 

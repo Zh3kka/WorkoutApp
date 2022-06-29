@@ -17,15 +17,27 @@ const Header = () => {
   return (
     <header className={styles.header}>
       {location.pathname !== "/" ? (
-        <button type="button" onClick={() =>  history.push("/")}>
-          <img src={arrowImage} alt="Back" />
+        <button type="button" onClick={() => history.goBack()}>
+          <img
+            src={arrowImage}
+            alt="Back"
+            draggable={false}
+            width="29"
+            height="23"
+          />
         </button>
       ) : (
         <button
           type="button"
           onClick={() => history.push(isAuth ? "/profile" : "/auth")}
         >
-          <img src={isAuth ? authImage : userImage} alt="Auth" height="30" />
+          <img
+            src={isAuth ? authImage : userImage}
+            alt="Auth"
+            height="30"
+            width="30"
+            draggable={false}
+          />
         </button>
       )}
       <Hamburger />

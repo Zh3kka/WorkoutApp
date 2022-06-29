@@ -151,7 +151,8 @@ img {
 }
 
 .dark-link {
-	display: inline-block;
+	display: initial;
+	float: right;
 	width: 100%;
     text-align: right;
     text-decoration: none;
@@ -168,3 +169,14 @@ img {
     padding: 50px 20px;
     text-align: center;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
