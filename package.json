@@ -8,6 +8,7 @@
     "server": "nodemon server/server.js",
     "server-start": "node server/server.js",
     "install-client": "cd client && npm install",
+    "build": "cd client && npm run build",
     "heroku-postbuild": "npm run install-client && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
