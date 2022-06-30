@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { menu } from "./menuBase";
 import hamburgerImage from "../../../../images/header/hamburger.svg";
 import hamburgerCloseImage from "../../../../images/header/hamburger-close.svg";
@@ -8,7 +8,8 @@ import { useAuth } from "../../../../hooks/useAuth";
 import { useOutsideAlerter } from "../../../../hooks/useOutsideAlerter";
 
 const Hamburger = () => {
-  const { setIsAuth } = useAuth();
+  const history = useHistory();
+  const { isAuth, setIsAuth } = useAuth();
   const { ref, isComponentVisible, setIsComponentVisible } =
     useOutsideAlerter(false);
 
@@ -16,6 +17,10 @@ const Hamburger = () => {
     localStorage.removeItem("token");
     setIsAuth(true);
     setIsComponentVisible(false);
+  };
+
+  const handleLogin = () => {
+    history.push("/auth");
   };
 
   return (
@@ -42,9 +47,15 @@ const Hamburger = () => {
             </li>
           ))}
           <li>
-            <button onClick={handleLogout} className={styles.logout}>
-              Logout
-            </button>
+            {isAuth ? (
+              <button onClick={handleLogout} className={styles.logout}>
+                Logout
+              </button>
+            ) : (
+              <button onClick={handleLogin} className={styles.logout}>
+                Login
+              </button>
+            )}
           </li>
         </ul>
       </nav>
